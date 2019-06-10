@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input"/>
+<input type="button" value="dich" onclick="nhap()"/>
+<div id="show_result"></div>
+<script>
+    function nhap() {
+        let x = document.getElementById("input");
+        let eng = ["one", "two", "three","four", "five","six","seven", "eight", "nine", "ten"];
+        let vie = ["một", "hai", "ba","bốn" ,"năm", "sáu", "bảy", "tám", "chín", "mười"];
+       for (let i=0; i<=eng.length; i++) {
+            if (x.value === eng[i]) {
+                document.getElementById("show_result").innerHTML = "từ có nghĩa là"+ " = " +vie[i];
+                break;
+            }else {
+                document.getElementById("show_result").innerHTML="không tìm thấy trong tử điển";
+            }
+       }
+    }
+</script>
+</body>
+</html>
